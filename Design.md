@@ -57,8 +57,40 @@ The sequence of events are as follows:
 2. The registry returns a response to the request. If successful, the service is now registered.
 
 The registry has a TTL for a registered service. Once the TTL elapses, the service is automatically de-registered.
-Periodically, the service is required to asynchronously send a heartbeat to the registry in order to
+Periodically, the service is required to asynchronously send a heartbeat to the registry in order to stop itself
+from being registered.
+3. Heartbeat request is asynchronously sent
+4. Registry responds to heartbeat
 
+### 2. Incoming request to service
+When an endpoint on the service is hit, the behaviour can be split into roughly two parts:
+1. Validating the request (i.e. checking that the user has the permissions to call this endpoint with the provided
+parameter values)
+2. Business logic calculation
+
+I've split the explanation up to be between two diagrams.
+
+#### 2.1 Valid permissions first sought
+![scenario 2.1 image](images/scenario_2_1.png)
+
+1. Incoming request for an endpoint provided by the service
+2. Request is routed to the service
+3. Charge cycles service then sends a request to the permissions service (via the service registry)
+   - This request includes the asset ID and the user's cookie
+4. Request is routed to the permissions service
+5. Permissions service responds to service registry
+6. Service registry routes response to charge cycles service
+
+#### 2.2 Service calculates result and completes request
+This is dependent on the response from the Permissions service in 2.1 responding with success
+![scenario 2.2 image](images/scenario_2_2.png)
+
+1. Charge cycles service sends a request to the upstream API via service registry
+2. Service registry routes request to upstream API
+3. Upstream API responds to request
+4. Request routed back to charge cycles service
+5. Charge cycles service uses data and responds to request
+6. Service registry routes response
 
 ### Scaling
 

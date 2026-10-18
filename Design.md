@@ -138,7 +138,6 @@ A new version of the API spec is included in this directory (named `upstream-api
 the changes requested in the tickets.
 
 # TODO:
-2. Add tickets and adjust API spec
 3. API specs for other services
 4. Make service class
 5. Add dockerfile and test we can add it to k8s

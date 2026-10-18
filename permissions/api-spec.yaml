@@ -4,8 +4,6 @@ info:
   version: 1.0.0
   description: API for setting/retreiving permissions for users
 
-components:
-
 paths:
   /permissions/v1/access/{asset-id}:
     get:
@@ -13,14 +11,14 @@ paths:
         - Permissions
       summary: Check whether the caller has access to the asset
       security:
-        - cookieAuth: []
+        - cookieAuth: [ ]
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              example: {"parameter1" : "value", "paramter2" : value}
+              example: { "parameter1": "value", "paramter2": value }
               additionalProperties:
                 type: string
 

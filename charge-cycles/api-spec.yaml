@@ -1,0 +1,104 @@
+openapi: 3.0.0
+info:
+  title: Charge Cycles Service API
+  version: 1.0.0
+  description: API for retrieving charge cycle information from an asset
+
+paths:
+  /charge-cycles/v1/:
+    get:
+      tags:
+        - Analytics
+      summary: Retrieve the number of charge cycles over a given time period
+      security:
+        - cookieAuth: []
+      parameters:
+        - name: asset-id
+          in: path
+          schema:
+            type: string
+            format: uuid
+        - name: from
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+          description: Start timestamp (ISO 8601) inclusive of this time
+          example: "2025-09-08T00:00:00Z"
+        - name: to
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+          description: End timestamp (ISO 8601) inclusive of this time
+          example: "2025-09-09T00:00:00Z"
+      responses:
+        '200':
+          description: Metering data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  cycleAmount:
+                    type: number
+                    format: float
+                    description: Number of cycles that have completed over the time period
+                    example: 2.4
+
+  /charge-cycles/v1/warranty-info/:
+    get:
+      tags:
+        - Analytics
+      summary: Retrieve the warranty related information for a given time period
+      security:
+        - cookieAuth: []
+      parameters:
+        - name: asset-id
+          in: path
+          schema:
+            type: string
+            format: uuid
+        - name: from
+          in: path
+          required: true
+          schema:
+            type: string
+            format: date-time
+          description: Start timestamp (ISO 8601) inclusive of this time
+          example: "2025-09-08T00:00:00Z"
+        - name: to
+          in: path
+          required: true
+          schema:
+            type: string
+            format: date-time
+          description: End timestamp (ISO 8601) inclusive of this time
+          example: "2025-09-08T00:00:00Z"
+      responses:
+        '200':
+          description: Warranty Information
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WarrantyInfo"
+
+components:
+  schemas:
+    WarrantyInfo:
+      type: object
+      properties:
+        budget:
+          type: number
+          format: float
+          description: The maximum number of cycles that can be completed in this period (according to the warranty)
+        cycles:
+          type: number
+          format: float
+          description: The number of charge cycles that have been completed in this period
+        percentage:
+          type: number
+          format: float
+          description: The percentage of the warranty budget that has been used in this period

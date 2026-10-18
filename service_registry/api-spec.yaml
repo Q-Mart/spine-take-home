@@ -45,9 +45,19 @@ paths:
           application/json:
             schema:
               type: object
-              example: {"parameter1" : "value", "paramter2" : value}
+              example: { "parameter1": "value", "paramter2": value }
               additionalProperties:
                 type: string
+      responses:
+        "200":
+          description: Successful call. The returned data from the target endpoint is returned as JSON here
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: []
+
+  # TODO: Work out how to propagate failures (they won't be sent with a status of 200)
 
 components:
   schemas:
@@ -56,15 +66,15 @@ components:
       properties:
         serviceType:
           type: string
-          example: ChargeCycles
+          example: charge-cycles
           description: The name of the service application
         location:
           description: The IP address or URI of the service
           type: string
           anyOf:
-              - format: ipv4
-              - format: ipv6
-              - format: uri
+            - format: ipv4
+            - format: ipv6
+            - format: uri
         endpoints:
           description: List of endpoints the service exposes
           type: array

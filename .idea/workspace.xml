@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d73ca4a1-1ea9-481d-a91f-90c8a4fa68af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/images/scenario_2_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/scenario_2_2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Design.md" beforeDir="false" afterPath="$PROJECT_DIR$/Design.md" afterDir="false" />
     </list>
@@ -44,51 +42,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.ApplicationTests (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404 (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApplicationTests.getMeteringForAsset_givenImpossibleTimeWindow_returns400.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.dummy [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.dummy [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.spine-take-home [com.diffplug.spotless:spotless-maven-plugin:3.10.4:apply].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Application (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Application (2).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.DummyApplication (3).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.DummyApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/q/code/spine-take-home/.idea&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.ApplicationTests (1).executor": "Run",
+    "JUnit.ApplicationTests.contextLoads.executor": "Run",
+    "JUnit.ApplicationTests.executor": "Run",
+    "JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404 (1).executor": "Run",
+    "JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404.executor": "Run",
+    "JUnit.ApplicationTests.getMeteringForAsset_givenImpossibleTimeWindow_returns400.executor": "Run",
+    "Maven.dummy [compile].executor": "Run",
+    "Maven.dummy [install].executor": "Run",
+    "Maven.spine-take-home [com.diffplug.spotless:spotless-maven-plugin:3.10.4:apply].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Application (1).executor": "Run",
+    "Spring Boot.Application (2).executor": "Run",
+    "Spring Boot.Application.executor": "Run",
+    "Spring Boot.DummyApplication (3).executor": "Run",
+    "Spring Boot.DummyApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/q/code/spine-take-home",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/.idea" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/.idea" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tickets" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/dummy/src" />
       <recent name="$PROJECT_DIR$/dummy/src/main" />
       <recent name="$PROJECT_DIR$/dummy" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -286,7 +284,8 @@
       <workItem from="1792076632155" duration="14572000" />
       <workItem from="1792145626951" duration="6711000" />
       <workItem from="1792160088148" duration="13260000" />
-      <workItem from="1792248033568" duration="9186000" />
+      <workItem from="1792248033568" duration="11392000" />
+      <workItem from="1792332027842" duration="2671000" />
     </task>
     <servers />
   </component>

@@ -35,6 +35,8 @@
   tools in place to track whenever a service is degrading.
   - I'm currently assuming that this domain is out of scope for the task, so will not focus on it
 
+### 6. System is running on a Kubernetes cluster
+
 ## Design
 The plan is to create one service named _Charge Cycles_. This service will expose a number of endpoints that do the
 following:
@@ -93,16 +95,50 @@ This is dependent on the response from the Permissions service in 2.1 responding
 6. Service registry routes response
 
 ### Scaling
+To cope with increased demand, each service can theoretically be replicated, with replicas then positioned behind a
+load balancer. Additionally, it looks like all of the services mentioned here will be dealing with more read
+requests than write requests. We can add caches in front of each load balancer to help deal with the read request
+volume.
+
+Assuming the database continues to be performant,
+I'd anticipate the permissions service to be the first thing to be overloaded (as many different services will want
+to check various aspects of user permissions). So this is likely going to be the first thing we scale up.
 
 ## Priorities
 Below are a list of details to implement in priority order (i.e. 1 = highest priority thing to do). I would consider
-(2) to be the MVP, as any data leakage could cause permanent damage to the company's reputation.
+(1) to be the MVP, as any data leakage could cause permanent damage to the company's reputation. (2) is when the
+service can begin to become usable to other components, and (3) would include additional functionality to hopefully
+improve user experience.
 
-1. `cycles` service that can return the number of cycles over a given timeframe for an asset
-2. `cycles` service 
+1. Charge cycles service that can return the number of cycles over a given timeframe for an asset. Service only
+returns this number if the requesting user has permission to view the asset.
+2. Charge cycles service can register itself with the service registry and send heartbeats asynchronously
+3. Charge cycles service can also return the number of cycles for an asset in the context of its warranty period
 
 ## Additional work to consider in the future
 ### 1. Compaction job on the database
-- Need to get customer requirements
+- Over time, I assume users will care less about the granularity of measurements from the past. E.g. I assume asset
+  optimisers wouldn't ever look at the charge cycle data from a particular day that occured 5 years ago. Therefore,
+  there is potential to save space on the metering database by compacting this data.
+  - E.g. Instead of storing ~2.6x106 data points for every second of a given month, we could aggregate all the data
+  across the month and store it as one data point
+- An asynchronous compaction job could run periodically to achieve this 
+- We'd need to get an idea of what timescales users stop caring about highly granular data before we do this.
 
 ### 2. Split the service out into smaller analytics services as it grows/we identify new domains
+Currently, I've included endpoints for both charge cycle calculations and warranty-related calculations
+in one service as I see them as bound to the same domain.
+As the functionaltiy grows, and more business logic is introduced, it could be the case that we identify
+two or more separate domains within the code. If that is the case, we should split this service up into
+multiple separate services, with one service for each domain.
+
+## Upstream Change Requests
+Within the `tickets` directory, you will find the upstream change requests that have I created for both API endpoints
+A new version of the API spec is included in this directory (named `upstream-api-docs.yaml`), which contains all
+the changes requested in the tickets.
+
+# TODO:
+2. Add tickets and adjust API spec
+3. API specs for other services
+4. Make service class
+5. Add dockerfile and test we can add it to k8s

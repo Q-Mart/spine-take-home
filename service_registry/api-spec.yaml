@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  title: Service Registry API
+  version: 1.0.0
+  description: API for service discovery in the system
+
+paths:
+  /services/v1/register:
+    post:
+      summary: Register a service to the registry
+      tags:
+        - Service Registry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegistrationDetails"
+      responses:
+        "201":
+          description: Created
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: d097f623-816c-4314-84b2-940e3200f937
+                description: The UUID for the service on the registry
+
+  /services/v1/heartbeat/{service-id}:
+    put:
+      summary: Send a heartbeat for an existing service
+      tags:
+        - Service Registry
+      responses:
+        "200":
+          description: Success
+
+    get:
+      tags:
+        - Service Registry
+      summary: Call an endpoint on a service
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              example: {"parameter1" : "value", "paramter2" : value}
+              additionalProperties:
+                type: string
+
+components:
+  schemas:
+    RegistrationDetails:
+      type: object
+      properties:
+        serviceType:
+          type: string
+          example: ChargeCycles
+          description: The name of the service application
+        location:
+          description: The IP address or URI of the service
+          type: string
+          anyOf:
+              - format: ipv4
+              - format: ipv6
+              - format: uri
+        endpoints:
+          description: List of endpoints the service exposes
+          type: array
+          example:
+            - "/users/"
+            - "/assets"
+          items:
+            type: string
+        description:
+          type: string
+          description: Description of the service's domain

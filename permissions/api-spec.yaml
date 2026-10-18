@@ -1,0 +1,189 @@
+openapi: 3.0.0
+info:
+  title: Renewables Asset Registry & Metering API
+  version: 1.0.0
+  description: API for managing renewables assets and retrieving metering data
+
+servers:
+  - url: https://api.spineplatform.com
+    description: Production server
+
+
+paths:
+  /asset-management/v1/assets:
+    get:
+      summary: Get list of all assets
+      tags:
+        - Asset Management
+      responses:
+        '200':
+          description: List of assets
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Asset'
+
+
+  /metering/v1/asset/{assetId}:
+    get:
+      summary: Get metering data for an asset
+      tags:
+        - Metering
+      parameters:
+        - name: assetId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Unique asset identifier
+        - name: from
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+          description: Start timestamp (ISO 8601) inclusive of this time
+          example: "2025-09-08T00:00:00Z"
+        - name: to
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+          description: End timestamp (ISO 8601) inclusive of this time
+          example: "2025-09-09T00:00:00Z"
+        - name: labels
+          in: query
+          required: false
+          schema:
+            type: array
+            items:
+              type: string
+              enum: [soc, power, frequency, temperature, totalEnergyImported, totalEnergyExported]
+          style: form
+          explode: false
+          description: Comma-separated list of telemetry readings to return. All values have 1 second refresh rate
+          example: "soc,power,totalEnergyImported,totalEnergyExported"
+      responses:
+        '200':
+          description: Metering data
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MeteringDataPoint'
+        '400':
+          description: Invalid parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Asset not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    Asset:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "123e4567-e89b-12d3-a456-426614174000"
+        name:
+          type: string
+          example: "My battery site"
+        owner:
+          type: string
+          format: uuid
+          description: Identifier for the owning organisation
+          example: "baf1d212-c892-4605-9bc4-30c17aea1f87"
+        assetType:
+          type: string
+          enum:
+            - bess
+            - pv
+            - wind
+        capabilities:
+          type: object
+          properties:
+            energyCapacity:
+              type: float
+              description: Battery capacity in Wh
+              example: 50000000.0
+            powerCapability:
+              type: float
+              description: Asset max deliverable power in W
+              example: 50000000.0
+        warranty:
+          type: object
+          properties:
+            startDate:
+              type: string
+              format: date-time
+              description: The start date for the warranty
+            endDate:
+              type: string
+              format: date-time
+              description: The end date for the warranty
+            annualCycles:
+              type: float
+              description: Maximum battery cycles that can be performed per year
+              example: 1100.0
+            maxSoc:
+              type: float
+              description: The maximum state of charge that the battery is allowed to reach (percent)
+              example: 95.0
+            minSoc:
+              type: float
+              description: The minimum state of charge that the battery is allowed to reach (percent)
+              example: 5.0
+
+    MeteringDataPoint:
+      type: object
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          example: "2025-09-09T14:30:00Z"
+        soc:
+          type: float
+          description: State of Charge (%)
+          minimum: 0
+          maximum: 100
+          example: 75.5
+        power:
+          type: float
+          description: Power output/input in Wh (positive = discharge, negative = charge)
+          example: 5000000
+        frequency:
+          type: float
+          description: Grid frequency in Hz
+          example: 50.01
+        temperature:
+          type: float
+          description: Battery temperature in Celsius
+          example: 25.3
+        totalEnergyImported:
+          type: float
+          description: Cumulative energy imported in Wh
+          example: 178000000.0
+        totalEnergyExported:
+          type: float
+          description: Cumulative energy exported in Wh
+          example: 156000000.0
+
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "Asset with ID 123e4567-e89b-12d3-a456-426614174000 does not exist"

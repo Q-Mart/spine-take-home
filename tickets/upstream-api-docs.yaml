@@ -79,15 +79,17 @@ paths:
         '400':
           description: Invalid parameters
           content:
-            application/json:
+            text/plain:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: string
+                example: "startDate of 2027-10-18T20:11:12.272Z must be before endDate of 2026-10-18T20:11:12.272Z"
         '404':
           description: Asset not found
           content:
-            application/json:
+            text/plain:
               schema:
-                $ref: '#/components/schemas/Error'
+                type: string
+                example: "Asset not found"
 
 components:
   schemas:
@@ -116,11 +118,13 @@ components:
           type: object
           properties:
             energyCapacity:
-              type: float
+              type: number
+              format: float
               description: Battery capacity in Wh
               example: 50000000.0
             powerCapability:
-              type: float
+              type: number
+              format: float
               description: Asset max deliverable power in W
               example: 50000000.0
         warranty:
@@ -135,15 +139,18 @@ components:
               format: date-time
               description: The end date for the warranty
             annualCycles:
-              type: float
+              type: number
+              format: float
               description: Maximum battery cycles that can be performed per year
               example: 1100.0
             maxSoc:
-              type: float
+              type: number
+              format: float
               description: The maximum state of charge that the battery is allowed to reach (percent)
               example: 95.0
             minSoc:
-              type: float
+              type: number
+              format: float
               description: The minimum state of charge that the battery is allowed to reach (percent)
               example: 5.0
 
@@ -155,29 +162,35 @@ components:
           format: date-time
           example: "2025-09-09T14:30:00Z"
         soc:
-          type: float
+          type: number
+          format: float
           description: State of Charge (%)
           minimum: 0
           maximum: 100
           example: 75.5
         power:
-          type: float
+          type: number
+          format: float
           description: Power output/input in Wh (positive = discharge, negative = charge)
           example: 5000000
         frequency:
-          type: float
+          type: number
+          format: float
           description: Grid frequency in Hz
           example: 50.01
         temperature:
-          type: float
+          type: number
+          format: float
           description: Battery temperature in Celsius
           example: 25.3
         totalEnergyImported:
-          type: float
+          type: number
+          format: float
           description: Cumulative energy imported in Wh
           example: 178000000.0
         totalEnergyExported:
-          type: float
+          type: number
+          format: float
           description: Cumulative energy exported in Wh
           example: 156000000.0
 

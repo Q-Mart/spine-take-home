@@ -7,8 +7,8 @@
 		<artifactId>spine-take-home</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<groupId>org.spine</groupId>
-	<artifactId>charge-cycles</artifactId>
+	<groupId>org.spine.analytics</groupId>
+	<artifactId>chargecycles</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
@@ -38,6 +38,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.spine</groupId>
+			<artifactId>utils</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 

@@ -1,12 +1,12 @@
-package org.spine.upstream.dummy;
+package org.spine.analytics.chargecycles;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DummyApplication {
+public class Application {
 
   public static void main(String[] args) {
-    SpringApplication.run(DummyApplication.class, args);
+    SpringApplication.run(Application.class, args);
   }
 }

@@ -31,8 +31,8 @@
     </dependencies>
 
     <modules>
-        <module>charge-cycles</module>
-<!--        <module>utils</module>-->
+        <module>chargecycles</module>
+        <module>utils</module>
     </modules>
 
     <properties>

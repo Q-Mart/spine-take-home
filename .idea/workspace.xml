@@ -5,10 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d73ca4a1-1ea9-481d-a91f-90c8a4fa68af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/charge-cycles/api-spec.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chargecycles/src/main/java/org/spine/analytics/chargecycles/RegistrationTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chargecycles/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/src/main/java/org/spine/utils/dto/Asset.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/src/main/java/org/spine/utils/dto/MeteringDataPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/target/spotless-index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/permissions/api-spec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/permissions/api-spec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_registry/api-spec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service_registry/api-spec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charge-cycles/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charge-cycles/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charge-cycles/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charge-cycles/api-spec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/api-spec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charge-cycles/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charge-cycles/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charge-cycles/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charge-cycles/src/main/java/org/spine/upstream/dummy/DummyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/src/main/java/org/spine/analytics/chargecycles/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charge-cycles/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charge-cycles/src/test/java/org/spine/upstream/dummy/DummyApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/src/test/java/org/spine/analytics/chargecycles/DummyApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +34,8 @@
       <list>
         <option value="Exception" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -71,7 +85,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/q/code/spine-take-home/charge-cycles",
+    "last_opened_file_path": "/Users/q/code/spine-take-home",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "run.configurations.included.in.services": "true",
@@ -81,8 +95,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/charge-cycles" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/charge-cycles" />
       <recent name="$PROJECT_DIR$/permissions" />
       <recent name="$PROJECT_DIR$/service_registry" />
       <recent name="$PROJECT_DIR$/.idea" />
@@ -112,28 +126,14 @@
               <entry key="Application" value="STOPPED" />
               <entry key="Application (1)" value="STOPPED" />
               <entry key="Application (2)" value="STOPPED" />
+              <entry key="DummyApplication" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application (2)">
-    <configuration name="ApplicationTests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="dummy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.spine.upstream.dummy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.spine.upstream.dummy" />
-      <option name="MAIN_CLASS_NAME" value="org.spine.upstream.dummy.ApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.DummyApplication (3)">
     <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="datastore" />
       <extension name="coverage">
@@ -149,8 +149,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dummy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.spine.upstream.dummy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.spine.upstream.dummy" />
+      <option name="MAIN_CLASS_NAME" value="org.spine.upstream.dummy.ApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="datastore" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.spine.upstream.dummy.*" />
@@ -166,7 +181,7 @@
       </method>
     </configuration>
     <configuration name="ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="datastore" />
+      <module name="dummy" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.spine.upstream.dummy.*" />
@@ -209,6 +224,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="chargecycles" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.spine.analytics.chargecycles.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="datastore" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.spine.persistence.Application" />
@@ -237,7 +259,7 @@
       </method>
     </configuration>
     <configuration name="DummyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="charge-cycles" />
+      <module name="chargecycles" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.spine.upstream.dummy.DummyApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -255,6 +277,7 @@
       <item itemvalue="JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404" />
       <item itemvalue="JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404 (1)" />
       <item itemvalue="JUnit.ApplicationTests (1)" />
+      <item itemvalue="Spring Boot.DummyApplication (3)" />
       <item itemvalue="Spring Boot.Application (2)" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.DummyApplication" />
@@ -291,7 +314,7 @@
       <workItem from="1792145626951" duration="6711000" />
       <workItem from="1792160088148" duration="13260000" />
       <workItem from="1792248033568" duration="11392000" />
-      <workItem from="1792332027842" duration="17206000" />
+      <workItem from="1792332027842" duration="20668000" />
     </task>
     <servers />
   </component>
@@ -302,12 +325,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/charge-cycles/src/main/java/org/spine/upstream/dummy/StubData.java</url>
+          <url>file://$PROJECT_DIR$/chargecycles/src/main/java/org/spine/upstream/dummy/StubData.java</url>
           <line>13</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/charge-cycles/src/main/java/org/spine/upstream/dummy/StubData.java</url>
+          <url>file://$PROJECT_DIR$/chargecycles/src/main/java/org/spine/upstream/dummy/StubData.java</url>
           <line>33</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>

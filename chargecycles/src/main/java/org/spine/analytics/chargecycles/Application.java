@@ -36,6 +36,7 @@ public class Application {
       @RequestParam Instant to,
       @CookieValue("JSESSIONID") String cookie) {
 
+    // This would go via the service registry in the real world
     int status = getPermissionAccessHttpRequest(assetId, cookie);
 
     if (status != 200) {
@@ -57,6 +58,7 @@ public class Application {
     Asset asset = getAsset(assetId);
 
     // TODO: sort out what to do when this returns a 400 or 404 error
+    // This would go via the service registry in the real world
     List<MeteringDataPoint> dataPoints =
         getMeteringForAssetHttpRequest(assetId, from, to, List.of());
 

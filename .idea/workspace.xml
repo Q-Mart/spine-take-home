@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d73ca4a1-1ea9-481d-a91f-90c8a4fa68af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chargecycles/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design.md" beforeDir="false" afterPath="$PROJECT_DIR$/Design.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chargecycles/src/main/java/org/spine/analytics/chargecycles/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/src/main/java/org/spine/analytics/chargecycles/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chargecycles/src/test/java/org/spine/analytics/chargecycles/DummyApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/src/test/java/org/spine/analytics/chargecycles/ApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,42 +43,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.ApplicationTests (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404 (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApplicationTests.getMeteringForAsset_givenImpossibleTimeWindow_returns400.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.dummy [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.dummy [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.spine-take-home [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.spine-take-home [com.diffplug.spotless:spotless-maven-plugin:3.10.4:apply].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Application (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Application (2).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.DummyApplication (3).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.DummyApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/q/code/spine-take-home/utils&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.ApplicationTests (1).executor": "Run",
+    "JUnit.ApplicationTests.contextLoads.executor": "Run",
+    "JUnit.ApplicationTests.executor": "Run",
+    "JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404 (1).executor": "Run",
+    "JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404.executor": "Run",
+    "JUnit.ApplicationTests.getMeteringForAsset_givenImpossibleTimeWindow_returns400.executor": "Run",
+    "Maven.dummy [compile].executor": "Run",
+    "Maven.dummy [install].executor": "Run",
+    "Maven.spine-take-home [clean].executor": "Run",
+    "Maven.spine-take-home [com.diffplug.spotless:spotless-maven-plugin:3.10.4:apply].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Application (1).executor": "Run",
+    "Spring Boot.Application (2).executor": "Run",
+    "Spring Boot.Application (3).executor": "Run",
+    "Spring Boot.Application.executor": "Run",
+    "Spring Boot.DummyApplication (3).executor": "Run",
+    "Spring Boot.DummyApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/q/code/spine-take-home/utils",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/utils" />
@@ -117,6 +116,7 @@
               <entry key="Application" value="STOPPED" />
               <entry key="Application (1)" value="STOPPED" />
               <entry key="Application (2)" value="STOPPED" />
+              <entry key="Application (3)" value="STOPPED" />
               <entry key="DummyApplication" value="STOPPED" />
             </map>
           </value>
@@ -124,7 +124,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DummyApplication (3)">
+  <component name="RunManager" selected="Spring Boot.Application (3)">
     <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="datastore" />
       <extension name="coverage">
@@ -208,6 +208,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="chargecycles" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.spine.analytics.chargecycles.Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.spine.analytics.chargecycles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="dummy" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.spine.upstream.dummy.Application" />
@@ -266,21 +279,18 @@
     <list>
       <item itemvalue="JUnit.ApplicationTests" />
       <item itemvalue="JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404" />
-      <item itemvalue="JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404 (1)" />
-      <item itemvalue="JUnit.ApplicationTests (1)" />
-      <item itemvalue="Spring Boot.DummyApplication (3)" />
       <item itemvalue="Spring Boot.Application (2)" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.DummyApplication" />
       <item itemvalue="Spring Boot.DummyApplication (1)" />
       <item itemvalue="Spring Boot.DummyApplication (2)" />
+      <item itemvalue="Spring Boot.Application (3)" />
       <item itemvalue="Spring Boot.Application (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Application (3)" />
         <item itemvalue="Spring Boot.Application (1)" />
-        <item itemvalue="JUnit.ApplicationTests (1)" />
-        <item itemvalue="JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404 (1)" />
         <item itemvalue="JUnit.ApplicationTests.getMeteringForAsset_givenAssetDoesNotExist_returns404" />
         <item itemvalue="JUnit.ApplicationTests" />
       </list>
@@ -306,6 +316,7 @@
       <workItem from="1792160088148" duration="13260000" />
       <workItem from="1792248033568" duration="11392000" />
       <workItem from="1792332027842" duration="24743000" />
+      <workItem from="1792401121674" duration="1456000" />
     </task>
     <servers />
   </component>

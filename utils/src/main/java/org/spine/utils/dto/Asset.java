@@ -1,7 +1,9 @@
 package org.spine.utils.dto;
 
+import java.time.Instant;
+
 public record Asset(
-    String id, String name, Type type, Capabilities capabilities, Warranty warranty) {
+    String id, String name, String Owner, Type type, Capabilities capabilities, Warranty warranty) {
   public enum Type {
     BESS,
     PV,
@@ -23,5 +25,6 @@ public record Asset(
    */
   public record Capabilities(float energyCapacity, float powerCapacity) {}
 
-  public record Warranty(int term, int annualCycles, float maxSoc, float minSoc) {}
+  public record Warranty(
+      Instant startDate, Instant endDate, float annualCycles, float maxSoc, float minSoc) {}
 }

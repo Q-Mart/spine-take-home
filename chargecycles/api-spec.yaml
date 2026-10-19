@@ -42,7 +42,7 @@ paths:
               schema:
                 type: object
                 properties:
-                  cycleAmount:
+                  numberOfCycles:
                     type: number
                     format: float
                     description: Number of cycles that have completed over the time period

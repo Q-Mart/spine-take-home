@@ -12,15 +12,6 @@ paths:
       summary: Check whether the caller has access to the asset
       security:
         - cookieAuth: [ ]
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              example: { "parameter1": "value", "paramter2": value }
-              additionalProperties:
-                type: string
 
 components:
   securitySchemes:

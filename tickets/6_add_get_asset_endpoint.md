@@ -1,0 +1,2 @@
+We should have a separate endpoint to retrieve just one asset. Otherwise, any client that already knows the ID of
+which asset to get is forced to get all the assets and then find that asset at the client-side.

@@ -8,5 +8,5 @@ public record MeteringDataPoint(
     int power,
     float frequency,
     float temperature,
-    float totalEnergyImport,
+    float totalEnergyImported,
     float totalEnergyExported) {}

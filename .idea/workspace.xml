@@ -5,24 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d73ca4a1-1ea9-481d-a91f-90c8a4fa68af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/chargecycles/src/main/java/org/spine/analytics/chargecycles/RegistrationTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chargecycles/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/src/main/java/org/spine/utils/dto/Asset.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/src/main/java/org/spine/utils/dto/MeteringDataPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/target/spotless-index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tickets/6_add_get_asset_endpoint.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charge-cycles/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charge-cycles/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charge-cycles/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charge-cycles/api-spec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/api-spec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charge-cycles/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charge-cycles/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charge-cycles/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charge-cycles/src/main/java/org/spine/upstream/dummy/DummyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/src/main/java/org/spine/analytics/chargecycles/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charge-cycles/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/charge-cycles/src/test/java/org/spine/upstream/dummy/DummyApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/src/test/java/org/spine/analytics/chargecycles/DummyApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chargecycles/api-spec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/api-spec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chargecycles/src/main/java/org/spine/analytics/chargecycles/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/src/main/java/org/spine/analytics/chargecycles/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chargecycles/src/main/java/org/spine/analytics/chargecycles/RegistrationTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/src/main/java/org/spine/analytics/chargecycles/RegistrationTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chargecycles/src/main/java/org/spine/analytics/chargecycles/Stubs.java" beforeDir="false" afterPath="$PROJECT_DIR$/chargecycles/src/main/java/org/spine/analytics/chargecycles/Stubs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/permissions/api-spec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/permissions/api-spec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/upstream-api-docs.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/upstream-api-docs.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/org/spine/utils/dto/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/org/spine/utils/dto/Asset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/src/main/java/org/spine/utils/dto/MeteringDataPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/utils/src/main/java/org/spine/utils/dto/MeteringDataPoint.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +24,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Exception" />
         <option value="Enum" />
-        <option value="Record" />
         <option value="Class" />
+        <option value="Record" />
+        <option value="Exception" />
       </list>
     </option>
   </component>
@@ -68,6 +60,7 @@
     "JUnit.ApplicationTests.getMeteringForAsset_givenImpossibleTimeWindow_returns400.executor": "Run",
     "Maven.dummy [compile].executor": "Run",
     "Maven.dummy [install].executor": "Run",
+    "Maven.spine-take-home [clean].executor": "Run",
     "Maven.spine-take-home [com.diffplug.spotless:spotless-maven-plugin:3.10.4:apply].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
@@ -85,7 +78,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/q/code/spine-take-home",
+    "last_opened_file_path": "/Users/q/code/spine-take-home/utils",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "run.configurations.included.in.services": "true",
@@ -95,11 +88,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/utils" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/charge-cycles" />
       <recent name="$PROJECT_DIR$/permissions" />
       <recent name="$PROJECT_DIR$/service_registry" />
-      <recent name="$PROJECT_DIR$/.idea" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tickets" />
@@ -107,6 +100,9 @@
       <recent name="$PROJECT_DIR$/dummy/src" />
       <recent name="$PROJECT_DIR$/dummy/src/main" />
       <recent name="$PROJECT_DIR$/dummy" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.spine.utils.dto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -314,7 +310,7 @@
       <workItem from="1792145626951" duration="6711000" />
       <workItem from="1792160088148" duration="13260000" />
       <workItem from="1792248033568" duration="11392000" />
-      <workItem from="1792332027842" duration="20668000" />
+      <workItem from="1792332027842" duration="24743000" />
     </task>
     <servers />
   </component>

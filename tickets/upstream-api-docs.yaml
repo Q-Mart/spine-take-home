@@ -25,6 +25,25 @@ paths:
                 items:
                   $ref: '#/components/schemas/Asset'
 
+  /asset-management/v1/asset:
+    get:
+      summary: Get information for one asset
+      tags:
+        - Asset Management
+      parameters:
+        - name: asset-id
+          in: path
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: The information for the asset
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Asset'
+
 
   /metering/v1/asset/{assetId}:
     get:

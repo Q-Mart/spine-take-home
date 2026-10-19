@@ -2,9 +2,8 @@ package org.spine.analytics.chargecycles;
 
 import static org.spine.analytics.chargecycles.Stubs.*;
 
-import java.util.Set;
-
 import jakarta.annotation.PostConstruct;
+import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spine.utils.dto.RegistrationDetails;
@@ -62,8 +61,8 @@ public class RegistrationTask {
   }
 
   /**
-   * Periodic task for sending heartbeats
-   * TODO: find a way to configure the value for {@code fixedDelay} without hard-coding
+   * Periodic task for sending heartbeats TODO: find a way to configure the value for {@code
+   * fixedDelay} without hard-coding
    */
   @Scheduled(fixedDelay = 60000)
   void sendHeartbeat() {

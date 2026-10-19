@@ -1,4 +1,4 @@
-# Take Home Task - Qumarth Jash
+# Design Document
 
 ## Assumptions
 
@@ -136,8 +136,3 @@ multiple separate services, with one service for each domain.
 Within the `tickets` directory, you will find the upstream change requests that have I created for both API endpoints
 A new version of the API spec is included in this directory (named `upstream-api-docs.yaml`), which contains all
 the changes requested in the tickets.
-
-# TODO:
-3. API specs for other services
-4. Make service class
-5. Add dockerfile and test we can add it to k8s

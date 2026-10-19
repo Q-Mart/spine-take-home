@@ -2,6 +2,7 @@ package org.spine.analytics.chargecycles;
 
 import static org.spine.analytics.chargecycles.Stubs.*;
 
+import java.text.MessageFormat;
 import java.time.Instant;
 import java.util.List;
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.bind.annotation.*;
 
 @EnableScheduling
+@RestController
 @SpringBootApplication
 public class Application {
 
@@ -41,6 +43,15 @@ public class Application {
       Logger.warn(
           "Unable to get permissions for asset {}. {} status code returned", assetId, status);
       throw new ApiEndpointCallException(status, "Permission call failed");
+    }
+
+    if (from.isAfter(to)) {
+      String message =
+          MessageFormat.format(
+              "from timestamp of {0} cannot be after the to timestamp of {1}", from, to);
+
+      Logger.error(message);
+      throw new ApiEndpointCallException(400, message);
     }
 
     Asset asset = getAsset(assetId);
